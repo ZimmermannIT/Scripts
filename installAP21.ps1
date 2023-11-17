@@ -1,4 +1,4 @@
-﻿###InstallsAP21
+﻿###InstallsAP
 try
 {
 Invoke-WebRequest -Uri "https://zimazfilestorage.blob.core.windows.net/scripts/Apparel 21 Client Framework 8.12.exe" -OutFile C:\Windows\Temp\Ap21.exe
