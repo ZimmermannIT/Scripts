@@ -2,9 +2,11 @@ try
 {
 Invoke-WebRequest -Uri "https://zimazfilestorage.blob.core.windows.net/scripts/Apparel 21 Client Framework 8.12.exe" -OutFile C:\Windows\Temp\Ap21.exe
 
+start-sleep -Seconds 100
+
 & 'C:\Windows\Temp\Ap21.exe'/S /SyncOnStartup=1 /SyncLive=1 /SyncTest=1 /SyncNow=0 /ServerName=ap21db
 
-start-sleep -Seconds 400
+start-sleep -Seconds 300
 
 $shell = New-Object -comObject WScript.Shell
 $shortcut = $shell.CreateShortcut("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\Sync.lnk")
@@ -18,6 +20,6 @@ Write-Output "Ap21 installed and startup shortcut created"
 catch
 {
 
-Write-Output "Error"
+Write-Output "Error - AP21 installation failed"
 
 }
